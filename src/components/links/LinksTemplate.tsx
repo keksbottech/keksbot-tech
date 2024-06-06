@@ -4,11 +4,12 @@ import React from 'react'
 type LinksTemplateTypes = {
     link: string;
     name: string;
+    css: string;
 }
-function LinksTemplate({ link, name }: LinksTemplateTypes) {
+function LinksTemplate({ link, name, css }: LinksTemplateTypes) {
 
     return (
-        <li className='mx-5'><a href={link} className='capitalize' id={name}>{name}</a></li>
+        <li className={`${css}`}><a href={link} className='capitalize py-5 text-center' id={name}>{name}</a></li>
     )
 }
 

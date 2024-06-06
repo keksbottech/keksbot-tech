@@ -6,6 +6,13 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: [
+    "variant",
+    [
+      "@media (prefers-color-scheme: dark) { &:not(.light *) }",
+      "&:is(.dark *)",
+    ],
+  ],
   theme: {
     extend: {
       backgroundImage: {
@@ -13,8 +20,11 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      height: {
+        "h-100": "500px", // Example custom height class
+      },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
 export default config;

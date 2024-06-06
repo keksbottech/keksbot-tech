@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Kanit } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
+import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
+const kanit = Kanit({
+  subsets: ['latin'],
+  weight: ['200', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-kanit'
+});
 
 export const metadata: Metadata = {
   title: "Keksbot Tech",
@@ -16,7 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Script src="https://kit.fontawesome.com/20b8edb75e.js" ></Script>
+
+      <body className={kanit.className} >
+        {children}
+      </body>
+
     </html>
   );
 }
