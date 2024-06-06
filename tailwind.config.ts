@@ -20,9 +20,6 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      height: {
-        "h-100": "500px", // Example custom height class
-      },
     },
   },
   plugins: [require("flowbite/plugin")],
