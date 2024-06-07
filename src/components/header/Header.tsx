@@ -1,9 +1,10 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import LinksTemplate from '../links/LinksTemplate'
 import Image from 'next/image';
 import MenuIcon from '../menu icon/MenuIcon';
 import Button from '../button/Button';
+import { usePathname } from 'next/navigation';
 
 
 const NavLinks: {
@@ -39,11 +40,29 @@ const NavLinks: {
     ]
 
 function Header() {
+    const [isLinkActive, setIsLinkActive] = useState(false)
+    const pathname = usePathname()
+    const ref = useRef<HTMLLIElement | null>()
+
+    useEffect(() => {
+        console.log(ref);
+
+        getLinkInfo("")
+    }, [pathname])
+
+    const getLinkInfo = (link) => {
+        if (pathname === link) {
+            setIsLinkActive(true)
+        }
+        else {
+            setIsLinkActive(false)
+        }
+    }
 
     return (
         <nav className='flex p-3 justify-between items-center'>
             <MenuIcon onClick={() => null} css={'block md:hidden'} />
-            < Image src={'/logo/logo.png'} className='hidden md:block bg-white rounded-full' width={60} height={60} alt="company logo" />
+            <Image src={'/logo/logo.png'} className='hidden md:block bg-white rounded-full' width={60} height={60} alt="company logo" />
 
             <div className=' md:flex absolute  hidden md:relative left-0 top-0 bottom-0 w-3/4 md:w-fit  bg-transparent shadow-md md:shadow-none p-5'>
                 <div className='flex md:hidden items-center justify-between'>
@@ -51,7 +70,11 @@ function Header() {
                     <i className="fa fa-times text-xl text-red-500" aria-hidden="true"></i>
                 </div>
                 <ul className='block md:flex'>
-                    {NavLinks?.map(links => <LinksTemplate css={"pt-9 pb-1 md:py-1 hover:border-b-red-600 hover:border-b-2  text-sm md:text-center mx-4  w-20 md:w-100"} key={links.id} name={links.name} link={links.link} />)}
+                    {NavLinks?.map(links => {
+                        return (
+
+                            <LinksTemplate reff={ref} css={"pt-9 pb-1 md:py-1 hover:border-b-red-600 hover:border-b-2  text-sm md:text-center mx-2  w-20 md:w-100"} key={links.id} name={links.name} link={links.link} />)
+                    })}
                 </ul>
                 <Button
                     onClick={() => null}
@@ -63,7 +86,6 @@ function Header() {
                     <i className="fa fa-twitter mr-5 text-xl" aria-hidden="true"></i>
                     <i className="fa fa-facebook mr-5 text-xl" aria-hidden="true"></i>
                     <i className="fa fa-whatsapp text-xl" aria-hidden="true"></i>
-
                 </div>
 
             </div>

@@ -9,7 +9,7 @@ type CardTypes = {
 
 function Card({ css = null, header, main, footer }: CardTypes) {
     return (
-        <div className={`w-[200px] flex flex-col justify-middle items-center h-[200px] bg-white z-10 rounded-lg shadow-md ${css}`}>
+        <div className={`sm:w-full md:w-[170px] p-3 flex justify-middle items-center h-[170px] bg-white z-10 rounded-lg shadow-md ${css}`}>
             {header}
             {main}
             {footer}
