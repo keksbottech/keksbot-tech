@@ -3,11 +3,11 @@ import { Kanit } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Footer from "@/sections/footer/Footer";
-import Header from "@/components/header/Header";
+import Header from "@/sections/header/Header";
 
 const kanit = Kanit({
   subsets: ['latin'],
-  weight: ['200', '400', '500', '600', '700', '800', '900'],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-kanit'
 });
 

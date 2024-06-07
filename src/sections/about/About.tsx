@@ -4,8 +4,24 @@ import React from 'react'
 function About() {
     return (
         <section className="flex flex-col justify-center items-center mt-10">
-            <div className='max-w-[1200px] flex justify-between'>
-                <div className="flex flex-col items-end w-1/2">
+            <div className='max-w-[1200px] block lg:flex flex-row-reverse justify-between'>
+
+                <div className="relative lg:w-1/2 lg:ml-10 ml-0 h-full w-full p-4 lg:p-4">
+                    <div className='p-5 text-center rounded-2xl w-[200px]  bg-white shadow-lg absolute z-10 top-[-30px] left-0 '>
+                        <p className='text-red-500  text-2xl font-medium '>Expert +65</p>
+                    </div>
+                    <div className=" max-w-[70%]  h-[400px] relative top-[50px]">
+                        <Image fill alt="keksbot tech about image(1)" src="/dummy/dummy2.jpeg" className='rounded-2xl' />
+                    </div>
+                    <div className=" w-[40%] h-[380px] absolute lg:right-[-10px] right-[20px] top-[-30px]">
+                        <Image fill alt="keksbot tech about image(2)" src="/dummy/dummy2.jpeg" className='rounded-2xl' />
+                    </div>
+                    <div className='p-5 text-center rounded-2xl w-[200px] bg-white shadow-lg absolute bottom-[-30px] right-0 '>
+                        <p className='text-red-500  text-2xl font-medium'>+150 Clients</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-end w-full p-4 lg:p-0 mt-20 lg:mt-0  lg:w-1/2">
                     <h3 className="text-red-500 font-semibold uppercase">About us</h3>
                     <h1 className="text-right text-3xl font-bold uppercase my-4">we are here to help you build your business</h1>
                     <p className="text-right text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro veniam voluptates quisquam, exercitationem non dicta quam inventore laudantium maiores consequuntur culpa expedita architecto alias a sed dolores aliquid laboriosam quas!</p>
@@ -57,20 +73,6 @@ function About() {
                         <div className="w-[60px] h-[60px] relative ">
                             <Image fill src="/profile/profile.jpg" className="rounded-full" alt="onyechere favour ceo of keksbot tech" />
                         </div>
-                    </div>
-                </div>
-                <div className="relative w-1/2 ml-10 h-full">
-                    <div className='p-5 text-center rounded-2xl w-[200px]  bg-white shadow-lg absolute z-10 top-[-30px] left-0 '>
-                        <p className='text-red-500  text-2xl font-medium '>Expert +65</p>
-                    </div>
-                    <div className="w-[70%] h-[400px] relative top-[50px]">
-                        <Image fill alt="keksbot tech about image(1)" src="/dummy/dummy2.jpeg" className='rounded-2xl' />
-                    </div>
-                    <div className="w-[60%] h-[380px] absolute right-[-10px] top-[-30px]">
-                        <Image fill alt="keksbot tech about image(2)" src="/dummy/dummy2.jpeg" className='rounded-2xl' />
-                    </div>
-                    <div className='p-5 text-center rounded-2xl w-[200px] bg-white shadow-lg absolute bottom-[-30px] right-0 '>
-                        <p className='text-red-500  text-2xl font-medium'>+150 Clients</p>
                     </div>
                 </div>
 

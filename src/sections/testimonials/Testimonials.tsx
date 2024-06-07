@@ -8,7 +8,7 @@ function Testimonials() {
             <h1 className="text-lg text-red-500 uppercase font-semibold">Testimonials</h1>
             <p className="text-4xl font-semibold capitalize">What people say about us</p>
 
-            <div className='flex mt-10 max-w-[1100px] justify-center  items-end'>
+            <div className='flex overflow-scroll w-full mt-10 max-w-[1100px] justify-center  items-end'>
                 <div className='w-[400px] duration-1000 group hover:bg-gradient-to-r from-[#FF7C5D] to-[#FD4C4E]  mx-1 rounded-lg shadow-lg p-7'>
                     <div className="flex items-center justify-end">
                         <div className="">

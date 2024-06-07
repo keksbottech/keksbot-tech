@@ -1,9 +1,9 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import LinksTemplate from '../links/LinksTemplate'
+import LinksTemplate from '../../components/links/LinksTemplate'
 import Image from 'next/image';
-import MenuIcon from '../menu icon/MenuIcon';
-import Button from '../button/Button';
+import MenuIcon from '../../components/menu icon/MenuIcon';
+import Button from '../../components/button/Button';
 import { usePathname } from 'next/navigation';
 
 

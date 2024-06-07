@@ -5,7 +5,7 @@ import Button from '../../components/button/Button'
 function Footer() {
     return (
         <footer className='bg-[#0E1C1F] mt-20'>
-            <section className='grid grid-cols-4 place-items-center py-32 px-20'>
+            <section className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center py-32 px-20'>
                 <ul className="flex flex-col items-end h-[200px]">
 
                     <li className='text-white text-[30px] border-b-[3px] border-red-500 w-20 flex flex-col items-end'><h1 className='text-nowrap'>Get in touch</h1></li>
