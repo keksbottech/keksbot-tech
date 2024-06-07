@@ -12,7 +12,7 @@ function LandingSection() {
                 <div className='lg:w-1/2 w-full flex flex-col lg:items-end justify-center lg:justify-start items-center'>
                     <h3 className="text-red-500 uppercase text-center lg:text-right font-semibold">Your vision our priority</h3>
                     <h1 className='uppercase text-4xl lg:text-right text-center font-bold my-5'>Software Company for your perfect app and website</h1>
-                    <p className='lg:text-right text-center text-gray-500 w-3/4 lg:w-[550px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum enim ipsam ullam veritatis minima placeat sint at quas eum animi, nisi voluptatum praesentium debitis quam fuga ad quia rerum?</p>
+                    <p className='lg:text-right text-center text-gray-500 w-3/4 lg:w-[550px] z-20'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorum enim ipsam ullam veritatis minima placeat sint at quas eum animi, nisi voluptatum praesentium debitis quam fuga ad quia rerum?</p>
                     <Button css={'bg-gradient-to-r from-red-400 to-red-600 p-4 rounded-lg mt-6 px-10'} onClick={() => null} component={<span>Learn more</span>} />
                     <Image src={"https://templates.hibootstrap.com/misa/rtl/assets/img/hero/particle-1.png"} height={10} width={60} alt='keksbot tech particle 1' className='absolute right-0 top-42 animate-bounce' />
                 </div>
@@ -20,10 +20,10 @@ function LandingSection() {
 
                 <div className='lg:w-1/2 w-full flex flex-col items-center  relative mt-20 lg:mt-0'>
 
-                    <Image src={'https://templates.hibootstrap.com/misa/rtl/assets/img/hero/particle-2.png'} height={10} width={60} alt='keksbot tech particle 2' className='absolute bottom-[500px] md:bottom-[150px]  left-0 animate-spin duration-1000' />
+                    <Image src={'https://templates.hibootstrap.com/misa/rtl/assets/img/hero/particle-2.png'} height={10} width={60} alt='keksbot tech particle 2' className='absolute bottom-[500px] md:bottom-[150px]left-0 animate-spin duration-1000' />
 
 
-                    <div className='w-full md:w-3/4 lg:w-full h-[560px] relative top-0 lg:top-20'>
+                    <div className='w-full md:w-3/4 lg:w-full md:h-[550px] lg:h-[600px] h-[400px] relative top-0 lg:top-20'>
                         <Image src={"/landing/landing.png"} fill alt='keksbot tech landing image' />
                     </div>
                     <div className='block md:flex flex-row-reverse justify-between w-full px-2'>

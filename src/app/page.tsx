@@ -1,12 +1,17 @@
-import Header from "@/components/header/Header";
+import About from "@/sections/about/About";
+import Features from "@/sections/features/Features";
 import LandingSection from "@/components/landing/LandingSection";
-import Image from "next/image";
+import Testimonials from "@/sections/testimonials/Testimonials";
+import WhyChooseUs from "@/sections/why choose us/WhyChooseUs";
 
 export default function Home() {
   return (
     <main >
-      <Header />
       <LandingSection />
+      <Features />
+      <About />
+      <WhyChooseUs />
+      <Testimonials />
     </main>
   );
 }

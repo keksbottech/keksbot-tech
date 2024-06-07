@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Kanit } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import Head from "next/head";
+import Footer from "@/sections/footer/Footer";
+import Header from "@/components/header/Header";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -23,9 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script src="https://kit.fontawesome.com/20b8edb75e.js" ></Script>
-
       <body className={kanit.className} >
+        <Header />
         {children}
+        <Footer />
       </body>
 
     </html>

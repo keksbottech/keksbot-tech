@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["templates.hibootstrap.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "templates.hibootstrap.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
 };
 
