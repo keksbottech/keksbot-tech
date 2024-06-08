@@ -42,6 +42,7 @@ const NavLinks: {
 function Header() {
     const [isLinkActive, setIsLinkActive] = useState(false)
     const pathname = usePathname()
+    /*
     const ref = useRef<HTMLLIElement | null>()
 
     useEffect(() => {
@@ -58,7 +59,7 @@ function Header() {
             setIsLinkActive(false)
         }
     }
-
+*/
     return (
         <nav className='flex p-3 justify-between items-center'>
             <MenuIcon onClick={() => null} css={'block md:hidden'} />
@@ -73,7 +74,7 @@ function Header() {
                     {NavLinks?.map(links => {
                         return (
 
-                            <LinksTemplate reff={ref} css={"pt-9 pb-1 md:py-1 hover:border-b-red-600 hover:border-b-2  text-sm md:text-center mx-2  w-20 md:w-100"} key={links.id} name={links.name} link={links.link} />)
+                            <LinksTemplate css={"pt-9 pb-1 md:py-1 hover:border-b-red-600 hover:border-b-2  text-sm md:text-center mx-2  w-20 md:w-100"} key={links.id} name={links.name} link={links.link} />)
                     })}
                 </ul>
                 <Button
