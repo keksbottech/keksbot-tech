@@ -9,14 +9,14 @@ function Testimonials() {
 
 
     return (
-        <section className='p-5 mt-20 flex flex-col items-center justify-center'>
+        <section className='p-5 mt-10 flex flex-col items-center justify-center bg-white py-20'>
             <h1 className="md:text-lg text-md text-red-500 uppercase font-semibold">Testimonials</h1>
             <p className="text-2xl md:text-4xl text-center font-semibold capitalize">What people say about us</p>
 
-            <div className='flex w-full mt-10 max-w-[1100px] justify-center  items-end'>
+            <div className='flex w-full mt-10 max-w-[1100px] justify-center  items-center'>
 
                 <SwiperContainer>
-                    <SwiperSlide className='w-[400px] duration-1000 group hover:bg-gradient-to-r from-[#FF7C5D] to-[#FD4C4E]  mx-1 rounded-lg shadow-lg p-7'>
+                    <SwiperSlide className='w-[400px] duration-1000 group hover:bg-gradient-to-r from-[#FF7C5D] to-[#FD4C4E]  mx-1 rounded-lg shadow-lg p-4 bg-white'>
 
                         <div className="flex items-center justify-end">
                             <div className="">

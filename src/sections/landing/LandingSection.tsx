@@ -28,12 +28,12 @@ function LandingSection() {
                     </div>
                     <div className='block md:flex flex-row-reverse justify-between w-full px-5 lg:px-2'>
                         <Card
-                            css={"relative md:absolute md:right-5 lg:right-[0px] w-full top-0 md:top-[170px] "}
+                            css={"relative md:absolute md:right-5 lg:right-[0px] top-0 md:top-[170px] sm:w-full md:w-[190px]  "}
                             footer={null}
                             header={<p className="font-bold md:font-medium text-lg">Business Growth</p>}
                             main={<Image src="/svg/chart-2 (1).svg" alt='keksbot tech business growth' width={160} height={10} className="mt-5" />}
                         />
-                        <Card css={"relative  md:absolute left-0 md:left-5 top-0 md:top-20 top-5 "} header={<Image src={'/dummy/dummy.jpeg'} alt='keksbot tech testimonial profile' width={50} height={50} className='rounded-full' />} main={<p className='text-center text-[12px] font-light my-3'>Keksbot tech is one of the best software companies you can rely on</p>} footer={<b className="text-sm">Joe Doe</b>} />
+                        <Card css={"relative  md:absolute left-0 md:left-5 top-0 md:top-20 top-5 sm:w-full md:w-[190px] "} header={<Image src={'/dummy/dummy.jpeg'} alt='keksbot tech testimonial profile' width={50} height={50} className='rounded-full' />} main={<p className='text-center text-[12px] font-light my-3'>Keksbot tech is one of the best software companies you can rely on</p>} footer={<b className="text-sm">Joe Doe</b>} />
                         <Card
                             css={"relative md:absolute md:right-5 lg:right-[-200px] md:w-[240px] md:h-[100px] top-10 md:top-[390px] flex justify-center items-center flex-row"}
                             footer={null}

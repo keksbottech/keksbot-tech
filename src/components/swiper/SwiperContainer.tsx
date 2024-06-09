@@ -9,25 +9,23 @@ import { Swiper } from 'swiper/react';
 
 function SwiperContainer({ children }: Readonly<{ children: React.ReactNode }>) {
     const [screenLayout, setScreenLayout] = useState(false)
-    const [screenWidth, setScreenWidth] = useState(0)
-
+    const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
     useEffect(() => {
-        const manageScreenResize = (e: any) => {
-            const screenX = e.target.outerWidth
+        const manageScreenResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
 
-            setScreenWidth(screenX)
-        }
+        window.addEventListener('resize', manageScreenResize);
 
-        window.addEventListener("resize", manageScreenResize)
-
-        return () => window.removeEventListener("resize", manageScreenResize)
-    }, [screenWidth])
+        // Clean up the event listener on component unmount
+        return () => window.removeEventListener('resize', manageScreenResize);
+    }, []);
 
 
     return (
         <Swiper
-            spaceBetween={60}
+            spaceBetween={30}
             autoplay={true}
             loop={true}
             navigation

@@ -3,7 +3,7 @@ import React from 'react'
 
 function About() {
     return (
-        <section className="flex flex-col justify-center items-center mt-10">
+        <section className="flex flex-col bg-white py-20 justify-center items-center mt-20">
             <div className='max-w-[1200px] block lg:flex flex-row-reverse justify-between'>
 
                 <div className="relative lg:w-1/2 lg:ml-10 ml-0 h-full w-full p-4 lg:p-4">

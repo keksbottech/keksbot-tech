@@ -54,7 +54,7 @@ function Footer() {
                     </li>
                 </ul>
 
-                <ul className="flex flex-col items-end h-[200px] mb-[6rem] mr-10">
+                <ul className="flex flex-col items-end h-[200px] mb-[6rem]  mr-0 lg:mr-10">
                     <li className='text-white text-[30px] border-b-[3px] border-red-500 w-20 flex flex-col items-end'><h1 className='text-nowrap'>Services</h1></li>
                     <li className='text-white flex items-center my-3'>
                         <a href="" className='mr-3 font-light' >Web Development</a>
@@ -106,7 +106,7 @@ function Footer() {
 
             <hr />
 
-            <section className='flex items-center justify-center p-5'>
+            <section className='flex items-center justify-center flex-col md:flex-row p-5'>
                 <h1 className='text-red-500'>Keksbot Tech</h1>
                 <p className='text-white ml-2'> All rights reserved By <span className="text-red-500">Keksbot Tech</span> &copy </p>
             </section>

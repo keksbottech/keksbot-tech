@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { RefObject } from 'react'
 
 
@@ -10,7 +11,7 @@ type LinksTemplateTypes = {
 function LinksTemplate({ link, name, css }: LinksTemplateTypes) {
 
     return (
-        <li className={`${css}`}><a href={link} className='capitalize py-5 text-center' id={name}>{name}</a></li>
+        <li className={`${css}`}><Link href={link} className='capitalize py-5 text-center' id={name}>{name}</Link></li>
     )
 }
 

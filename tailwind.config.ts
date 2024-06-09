@@ -21,6 +21,18 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      backdropBlur: {
+        "16": "16px",
+      },
+      backdropSaturate: {
+        "180": "180%",
+      },
+      colors: {
+        "custom-bg": "rgba(17, 25, 40, 0.15)",
+      },
+      borderRadius: {
+        "12": "12px",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

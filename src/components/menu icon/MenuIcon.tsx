@@ -6,7 +6,7 @@ type MenuIconType = {
 }
 function MenuIcon({ onClick, css }: MenuIconType) {
     return (
-        <button title='menu btn' type='button' className={css}>
+        <button onClick={onClick} title='menu btn' type='button' className={css}>
             <div className='bg-black w-7 h-0.5 mb-2' ></div>
             <div className='bg-black w-4 h-0.5 mb-2' ></div>
             <div className='bg-black w-7 h-0.5 ' ></div>
