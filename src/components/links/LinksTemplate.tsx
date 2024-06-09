@@ -7,10 +7,10 @@ type LinksTemplateTypes = {
     css: string;
 
 }
-function LinksTemplate({ link, name, css, reff }: LinksTemplateTypes) {
+function LinksTemplate({ link, name, css }: LinksTemplateTypes) {
 
     return (
-        <li ref={reff} className={`${css}`}><a href={link} className='capitalize py-5 text-center' id={name}>{name}</a></li>
+        <li className={`${css}`}><a href={link} className='capitalize py-5 text-center' id={name}>{name}</a></li>
     )
 }
 

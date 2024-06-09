@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import Button from '../../components/button/Button'
@@ -5,8 +6,8 @@ import Button from '../../components/button/Button'
 function Footer() {
     return (
         <footer className='bg-[#0E1C1F] mt-20'>
-            <section className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center py-32 px-20'>
-                <ul className="flex flex-col items-end h-[200px]">
+            <section className='grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 md:place-items-center place-items-end py-20 lg:py-32 px-5 md:px-20'>
+                <ul className="flex flex-col items-end h-[200px] mb-[6rem] md:mr-10">
 
                     <li className='text-white text-[30px] border-b-[3px] border-red-500 w-20 flex flex-col items-end'><h1 className='text-nowrap'>Get in touch</h1></li>
                     <li className='text-white flex items-center my-3'>
@@ -31,7 +32,7 @@ function Footer() {
                         <i className="text-red-500 fa fa-phone" aria-hidden="true"></i>
                     </li>
                 </ul>
-                <ul className="flex flex-col items-end h-[200px]">
+                <ul className="flex flex-col items-end h-[200px] mb-[6rem] ">
                     <li className='text-white text-[30px] border-b-[3px] border-red-500 w-20 flex flex-col items-end'><h1 className='text-nowrap'>Quick Links</h1></li>
                     <li className='text-white flex items-center my-3'>
 
@@ -53,7 +54,7 @@ function Footer() {
                     </li>
                 </ul>
 
-                <ul className="flex flex-col items-end h-[200px]">
+                <ul className="flex flex-col items-end h-[200px] mb-[6rem] mr-10">
                     <li className='text-white text-[30px] border-b-[3px] border-red-500 w-20 flex flex-col items-end'><h1 className='text-nowrap'>Services</h1></li>
                     <li className='text-white flex items-center my-3'>
                         <a href="" className='mr-3 font-light' >Web Development</a>
@@ -73,7 +74,7 @@ function Footer() {
                     </li>
                 </ul>
 
-                <div className='flex flex-col items-end h-[200px]'>
+                <div className='flex flex-col items-end h-[200px] mb-[4rem]'>
                     <div className='flex items-center'>
                         <div className='w-[50px] h-[50px] relative mr-4'>
                             <Image src={"/logo/logo.png"} fill alt='keksbot tech logo' />
@@ -83,7 +84,7 @@ function Footer() {
                     <h2 className='text-right text-white font-light mb-4 capitalize'>Subscribe our newsletter to get  our latest updated news</h2>
                     <form className='flex relative border-[.5px] rounded-md p-1 border-gray-600'>
                         <input className=' p-4 pl-[3.9rem] rounded-md w-[300px] outline-none bg-transparent ' placeholder='joedoe@gmail.com' />
-                        <Button css='bg-red-500 p-4 px-5 rounded-md absolute left-1 ' component={<i className="fa fa-paper-plane-o" aria-hidden="true"></i>} />
+                        <Button onClick={() => null} css='bg-red-500 p-4 px-5 rounded-md absolute left-1 ' component={<i className="fa fa-paper-plane-o" aria-hidden="true"></i>} />
                     </form>
                     <div className='py-3 flex items-center'>
                         <div className=' rounded-full w-10 h-10 bg-white flex flex-col items-center justify-center mr-3'>

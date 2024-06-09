@@ -4,6 +4,9 @@ import "./globals.css";
 import Script from "next/script";
 import Footer from "@/sections/footer/Footer";
 import Header from "@/sections/header/Header";
+import { register } from 'swiper/element/bundle';
+
+register();
 
 const kanit = Kanit({
   subsets: ['latin'],

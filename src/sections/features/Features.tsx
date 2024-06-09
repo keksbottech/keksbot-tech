@@ -8,7 +8,7 @@ function Features() {
 
             <section className='block lg:flex items-center bg-white shadow-sm rounded-lg mt-10'>
 
-                <div className='a flex justify-between  border-r-[rgba()] border-r-[.5px] p-10 rounded-s-lg'>
+                <div className='a flex justify-between  border-r-[rgba()] border-r-[.5px] p-10 rounded-s-lg border-b-2 lg:border-b-0'>
                     <div className="flex flex-col items-end mr-5">
                         <h1 className="font-semibold text-xl">Mobile Applications</h1>
                         <p className="text-right text-gray-700 font-light  mt-2 lg:mt-0">Bring your mobile app idea to life. Increase engagement and growth to your business</p>
@@ -18,7 +18,7 @@ function Features() {
                         aria-hidden="true"></i>
                 </div>
 
-                <div className='a flex justify-between  border-r-[rgba()] border-r-[.5px] p-10 '>
+                <div className='a flex justify-between  border-r-[rgba()] border-r-[.5px] p-10 border-b-2 lg:border-b-0'>
                     <div className="flex flex-col items-end mr-5">
                         <h1 className="font-semibold text-xl">Web Development</h1>
                         <p className="text-right text-gray-700 font-light  mt-2 lg:mt-0">Develop cutting edge websites & web apps. {"Let's"} craft your digital presence</p>

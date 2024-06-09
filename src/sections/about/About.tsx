@@ -10,16 +10,19 @@ function About() {
                     <div className='p-5 text-center rounded-2xl w-[200px]  bg-white shadow-lg absolute z-10 top-[-30px] left-0 '>
                         <p className='text-red-500  text-2xl font-medium '>Expert +65</p>
                     </div>
-                    <div className=" max-w-[70%]  h-[400px] relative top-[50px]">
-                        <Image fill alt="keksbot tech about image(1)" src="/dummy/dummy2.jpeg" className='rounded-2xl' />
+
+                    <div className=" max-w-[80%]  h-[400px] relative top-[50px]">
+                        <Image objectFit='cover' fill alt="keksbot tech about image(1)" src="/dummy/dummy2.jpeg" className='rounded-2xl' />
                     </div>
-                    <div className=" w-[40%] h-[380px] absolute lg:right-[-10px] right-[20px] top-[-30px]">
-                        <Image fill alt="keksbot tech about image(2)" src="/dummy/dummy2.jpeg" className='rounded-2xl' />
+                    <div className="absolute w-[70%] h-[380px] lg:right-0 right-[5px] top-[-30px]">
+                        <Image objectFit='cover' fill alt="keksbot tech about image(2)" src="/dummy/dummy2.jpeg" className='rounded-2xl' />
                     </div>
-                    <div className='p-5 text-center rounded-2xl w-[200px] bg-white shadow-lg absolute bottom-[-30px] right-0 '>
+                    <div className='p-5 text-center rounded-2xl w-[200px] bg-white shadow-lg z-10 absolute bottom-[0px] right-0 '>
                         <p className='text-red-500  text-2xl font-medium'>+150 Clients</p>
                     </div>
+
                 </div>
+
 
                 <div className="flex flex-col items-end w-full p-4 lg:p-0 mt-20 lg:mt-0  lg:w-1/2">
                     <h3 className="text-red-500 font-semibold uppercase">About us</h3>
