@@ -1,6 +1,12 @@
 import Form from '@/components/form/Form'
 import GeoLocation from '@/components/geo location/GeoLocation'
+import { Metadata } from 'next'
 import React from 'react'
+
+export const metadata: Metadata = {
+    title: "Contact Keksbot Tech",
+    description: "We are a software company for your apps and websites"
+}
 
 function ContactPage() {
     return (
