@@ -1,4 +1,3 @@
-'use client'
 import Image from 'next/image'
 import React from 'react'
 import Button from '../../components/button/Button'
@@ -84,7 +83,7 @@ function Footer() {
                     <h2 className='text-right text-white font-light mb-4 capitalize'>Subscribe our newsletter to get  our latest updated news</h2>
                     <form className='flex relative border-[.5px] rounded-md p-1 border-gray-600'>
                         <input className=' p-4 pl-[3.9rem] rounded-md w-[300px] outline-none bg-transparent ' placeholder='joedoe@gmail.com' />
-                        <Button onClick={() => null} css='bg-red-500 p-4 px-5 rounded-md absolute left-1 ' component={<i className="fa fa-paper-plane-o" aria-hidden="true"></i>} />
+                        <Button css='bg-red-500 p-4 px-5 rounded-md absolute left-1 ' component={<i className="fa fa-paper-plane-o" aria-hidden="true"></i>} />
                     </form>
                     <div className='py-3 flex items-center'>
                         <div className=' rounded-full w-10 h-10 bg-white flex flex-col items-center justify-center mr-3'>
