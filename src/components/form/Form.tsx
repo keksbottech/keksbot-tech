@@ -2,9 +2,13 @@
 import React from 'react'
 import Button from '../button/Button'
 
-function Form() {
+type FormType = {
+    css: string;
+    buttonText: string;
+}
+function Form({ css, buttonText }: FormType) {
     return (
-        <form className='mr-5 w-full lg:w-1/2 bg-[#F9FAFC] flex flex-col justify-end items-end' >
+        <form className={` bg-[#F9FAFC] flex flex-col justify-end items-end ${css}`} >
             <div className='w-full'>
                 <div className='block lg:flex items-center'>
                     <div className='w-full m-2'>
@@ -31,7 +35,7 @@ function Form() {
                 <textarea className='w-full border-none bg-[#eee] rounded-lg h-full' placeholder='Type your message'  > </textarea>
             </div>
 
-            <Button onClick={() => null} css="bg-gradient-to-r from-red-400 to-red-500 px-8 mt-4 p-4 mr-2 rounded-lg" component={<span>Send Message</span>} />
+            <Button onClick={() => null} css="bg-gradient-to-r from-red-400 to-red-500 px-8 mt-4 p-4 mr-2 rounded-lg" component={<span>{buttonText}</span>} />
         </form >
     )
 }

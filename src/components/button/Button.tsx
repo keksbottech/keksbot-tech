@@ -7,7 +7,7 @@ type ButtonProp = {
     css: string
 }
 
-function Button({ component, onClick, css }: ButtonProp) {
+function Button({ component, onClick = () => null, css }: ButtonProp) {
     return (
         <button className={`${css}`} type='button' onClick={onClick} > {component}</button >
     )

@@ -55,7 +55,7 @@ function Header() {
 
                         return (
 
-                            <LinksTemplate css={css} key={links.id} name={links.name} link={links.link} />)
+                            <LinksTemplate onClick={() => null} css={css} key={links.id} name={links.name} link={links.link} />)
                     })}
                 </ul>
                 <Button

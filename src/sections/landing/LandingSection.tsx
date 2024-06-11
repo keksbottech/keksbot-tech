@@ -1,13 +1,22 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import Button from '../../components/button/Button'
 import Card from '../../components/card/Card'
+import Newsletter from '@/components/newsletter/Newsletter'
 
 function LandingSection() {
+    const [isNewsLetterEnabled, setIsNewsLetterEnabled] = useState(true)
+
+    const toggleNewsletterDisplay = useCallback(() => {
+        setIsNewsLetterEnabled(!isNewsLetterEnabled)
+    }, [isNewsLetterEnabled])
+
+
     return (
         <section>
-            <div className='block lg:flex flex-row-reverse lg:mt-0 justify-center items-center pr-0 lg:pr-20 mt-10'>
+            {isNewsLetterEnabled && <Newsletter toggleNewsLetterDisplay={setIsNewsLetterEnabled} isNewsLetterEnabled={isNewsLetterEnabled} />}
+            < div className='block lg:flex flex-row-reverse lg:mt-0 justify-center items-center pr-0 lg:pr-20 mt-10'>
 
                 <div className='lg:w-1/2 w-full flex flex-col lg:items-end justify-center lg:justify-start items-center'>
                     <h3 className="text-red-500 uppercase text-center lg:text-right font-semibold">Your vision our priority</h3>

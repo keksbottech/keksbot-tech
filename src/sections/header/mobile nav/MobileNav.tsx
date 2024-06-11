@@ -42,7 +42,7 @@ function MobileNav({ toggleIsDrawerEnabled, isNavbarDrawerActive }: MobileNavTyp
 
                     return (
 
-                        <LinksTemplate css={css} key={links.id} name={links.name} link={links.link} />)
+                        <LinksTemplate onClick={toggleNavbarDrawerInMobile} css={css} key={links.id} name={links.name} link={links.link} />)
                 })}
             </ul>
             <Button

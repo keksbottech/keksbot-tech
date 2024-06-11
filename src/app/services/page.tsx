@@ -1,3 +1,4 @@
+import BackgroundPageImage from '@/components/background page image/BackgroundPageImage'
 import Services from '@/sections/services/Services'
 import { Metadata } from 'next'
 import React from 'react'
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 function ServicesPage() {
     return (
         <section>
+            <BackgroundPageImage routename='services' />
             <Services />
         </section>
     )

@@ -1,78 +1,67 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../../components/button/Button'
+import footerLinks from '@/company data/footerlinks.json'
+import Link from 'next/link'
 
 function Footer() {
+
     return (
         <footer className='bg-[#0E1C1F] mt-20'>
             <section className='grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 md:place-items-center place-items-end py-20 lg:py-32 px-5 md:px-20'>
-                <ul className="flex flex-col items-end h-[200px] mb-[6rem] md:mr-10">
 
-                    <li className='text-white text-[30px] border-b-[3px] border-red-500 w-20 flex flex-col items-end'><h1 className='text-nowrap'>Get in touch</h1></li>
-                    <li className='text-white flex items-center my-3'>
-                        <div className='mr-3'>
-                            <p className="text-right font-light">Location</p>
-                            <p className="text-right font-light">Owerri, Imo State, Nigeria</p>
-                        </div>
-                        <i className="text-red-500 fas fa-location    "></i>
-                    </li>
-                    <li className='text-white flex items-center my-3'>
-                        <div className='mr-3'>
-                            <p className="text-right font-light">Email</p>
-                            <p className="text-right font-light">keksbottech@gmail.com</p>
-                        </div>
-                        <i className="text-red-500 fa fa-envelope" aria-hidden="true"></i>
-                    </li>
-                    <li className='text-white flex items-center my-3'>
-                        <div className='mr-3'>
-                            <p className="text-right font-light">Phone</p>
-                            <p className="text-right font-light">+234 8039914037</p>
-                        </div>
-                        <i className="text-red-500 fa fa-phone" aria-hidden="true"></i>
-                    </li>
-                </ul>
-                <ul className="flex flex-col items-end h-[200px] mb-[6rem] ">
-                    <li className='text-white text-[30px] border-b-[3px] border-red-500 w-20 flex flex-col items-end'><h1 className='text-nowrap'>Quick Links</h1></li>
-                    <li className='text-white flex items-center my-3'>
-
-                        <a href="" className='mr-3 font-light' >About us</a>
-                        <i className="text-white fa fa-angle-right" aria-hidden="true"></i>
+                <ul className="flex flex-col items-end h-[200px] mb-[6rem] mr-0 lg:mr-10">
+                    <li className='text-white text-[30px] border-b-[3px] border-red-500 flex flex-col items-end capitalize mb-4 w-20'>
+                        <h1 className="text-nowrap">Get in touch</h1>
 
                     </li>
-                    <li className='text-white flex items-center my-3'>
-                        <a href="" className='mr-3 font-light' >Blog</a>
-                        <i className="text-white fa fa-angle-right" aria-hidden="true"></i>
+                    <li className='text-white flex  my-3 text-right capitalize'>
+                        <div className='mr-3'>
+                            <p>location</p>
+                            <p>owerri, imo state, Nigeria</p>
+                        </div>
+                        <i className="fa fa-building text-red-500" aria-hidden="true"></i>
                     </li>
-                    <li className='text-white flex items-center my-3'>
-                        <a href="" className='mr-3 font-light' >Services</a>
-                        <i className="text-white fa fa-angle-right" aria-hidden="true"></i>
+
+                    <li className='text-white flex  my-3 capitalize text-right'>
+                        <div className='mr-3'>
+                            <p>email</p>
+                            <p>keksbottech@gmail.com</p>
+                        </div>
+                        <i className="fa fa-envelope text-red-500" aria-hidden="true"></i>
+
                     </li>
-                    <li className='text-white flex items-center my-3'>
-                        <a href="" className='mr-3 font-light' >Contact us</a>
-                        <i className="text-white fa fa-angle-right" aria-hidden="true"></i>
+
+                    <li className='text-white flex  my-3 capitalize text-right'>
+                        <div className='mr-3'>
+                            <p>phone</p>
+                            <p >+2348039914037</p>
+                        </div>
+                        <i className="fa fa-phone text-red-500" aria-hidden="true"></i>
                     </li>
                 </ul>
 
-                <ul className="flex flex-col items-end h-[200px] mb-[6rem]  mr-0 lg:mr-10">
-                    <li className='text-white text-[30px] border-b-[3px] border-red-500 w-20 flex flex-col items-end'><h1 className='text-nowrap'>Services</h1></li>
-                    <li className='text-white flex items-center my-3'>
-                        <a href="" className='mr-3 font-light' >Web Development</a>
-                        <i className="text-white fa fa-angle-right" aria-hidden="true"></i>
-                    </li>
-                    <li className='text-white flex items-center my-3'>
-                        <a href="" className='mr-3 font-light' >Mobile Development</a>
-                        <i className="text-white fa fa-angle-right" aria-hidden="true"></i>
-                    </li>
-                    <li className='text-white flex items-center my-3'>
-                        <a href="" className='mr-3 font-light' >UX & UI Design</a>
-                        <i className="text-white fa fa-angle-right" aria-hidden="true"></i>
-                    </li>
-                    <li className='text-white flex items-center my-3'>
-                        <a href="" className='mr-3 font-light' >Marketing</a>
-                        <i className="text-white fa fa-angle-right" aria-hidden="true"></i>
-                    </li>
-                </ul>
+                {footerLinks.map((section, idx) => (
+                    <ul key={idx} className="flex flex-col items-end h-[200px] mb-[6rem] mr-0 lg:mr-10">
+                        <li className='text-white text-[30px] border-b-[3px] border-red-500 flex flex-col items-end capitalize mb-4 w-20'>
+                            <h1 className='text-nowrap'>{section[0].title || section[0].name || section[0]}</h1>
+                        </li>
+
+                        {section.slice(1).map((item) => (
+                            <li key={item.id} className='text-white flex items-center my-3 capitalize'>
+                                <h1 >
+                                    <Link
+                                        href={item.link || '#'}
+                                        className='mr-3 font-light'>
+                                        {item.title || item.name || item.subtitle || item.subname}
+                                    </Link>
+                                </h1>
+                                <i className="text-white fa fa-angle-right" aria-hidden="true"></i>
+                            </li>
+                        ))}
+                    </ul>
+                ))}
 
                 <div className='flex flex-col items-end h-[200px] mb-[4rem]'>
                     <div className='flex items-center'>
